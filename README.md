@@ -1,17 +1,17 @@
-## My Project Title
+## Homework 1
 
 
 ---
 
-### Project description
+### Homework description
 
-*Your description here*
-
+Task description in [Moodle](https://e-learning.hdm-stuttgart.de/moodle/mod/page/view.php?id=266397)
 
 ---
 
 ### Project structure
 
+Structure of this repo:
 
 
 ```nohighlight
