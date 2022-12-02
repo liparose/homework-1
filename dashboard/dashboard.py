@@ -221,9 +221,10 @@ text = alt.Chart(source).mark_text(align='center', dx=-11, dy=3, color='white').
 c = bars + text
 st.altair_chart(c, use_container_width=True)
 
+
 # Map
 st.subheader("Häufigkeitsverteilung")
-st.write("In dem letzten Diagramm wird die Verteilung der Kategorien nach den Marken dargestellt.") 
+st.write("In diesem letzten Diagramm wird die Verteilung der Kategorien nach den Marken dargestellt.") 
 
 source = df
 
