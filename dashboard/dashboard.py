@@ -262,4 +262,5 @@ text = base.mark_text(baseline='middle').encode(
 # Draw the chart
 c = heatmap + text
 st.altair_chart(c, use_container_width=True)
+
 #-------------------
