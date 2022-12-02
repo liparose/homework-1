@@ -161,7 +161,6 @@ c = alt.Chart(df).mark_bar().encode(
     alt.X('brand', axis=alt.Axis(title='Brand')),
     alt.Y('count(use_sex)', axis=alt.Axis(title='Number of sexual content in advertising')),
     ).properties(
-        title='Which brands use the most sexual content in their advertising?',
         width=900,
         height=400
     ).configure_title(
