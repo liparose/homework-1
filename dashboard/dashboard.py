@@ -154,7 +154,7 @@ st.write("Im Folgenden sind unterschiedliche Diagramme erzeugt worden, welche be
 #-------------------
 
 # Bar chart
-st.subheader("Bar chart")
+st.subheader("Bar Chart")
 st.write("Hier ist zu sehen, welche Marke wie oft sexuell geduldete Inhalte in ihrer Werbung verwendet.")
 
 c = alt.Chart(df).mark_bar().encode(
@@ -174,7 +174,7 @@ st.altair_chart(c, use_container_width=True)
 
 
 # Bar chart
-st.subheader("Line chart")
+st.subheader("Line Chart")
 st.write("Diese Grafik zeigt die absolute Häufigkeit der Werbeschaltungen von Unternehmen, sortiert nach Jahren.")
 
 line = alt.Chart(df).mark_line().encode(
@@ -195,7 +195,7 @@ st.altair_chart(c, use_container_width=True)
    
 
 # Bar chart
-st.subheader("Bar chart")
+st.subheader("Bar Chart")
 st.write("In diesem Diagramm werden die am häufigsten verwendeten Kategorien, sortiert nach Unternehmen, dargestellt.")
 
 source=finalfinal
@@ -221,9 +221,9 @@ c = bars + text
 st.altair_chart(c, use_container_width=True)
 
 
-# Map
-st.subheader("Häufigkeitsverteilung")
-st.write("In diesem letzten Diagramm wird die Verteilung der Kategorien nach den Marken dargestellt.") 
+# Pie chart
+st.subheader("Pie Chart")
+st.write("In diesem letzten Diagramm wird deutlich, welches Unternehmen am meisten auf lustige Werbung setzt.") 
 
 base = alt.Chart(final).mark_arc(innerRadius=50).encode(
     theta=alt.Theta(field="funny", type="quantitative", stack=True),
