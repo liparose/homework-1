@@ -225,41 +225,19 @@ st.altair_chart(c, use_container_width=True)
 st.subheader("Häufigkeitsverteilung")
 st.write("In diesem letzten Diagramm wird die Verteilung der Kategorien nach den Marken dargestellt.") 
 
-source = df
-
-# Configure common options
-base = alt.Chart(source).transform_aggregate(
-    total='count()',
-    groupby=['celebrity', 'funny']
-).encode(
-    alt.X('funny:O', scale=alt.Scale(paddingInner=0)),
-    alt.Y('celebrity:O', scale=alt.Scale(paddingInner=0)),
+base = alt.Chart(final).mark_arc(innerRadius=50).encode(
+    theta=alt.Theta(field="funny", type="quantitative", stack=True),
+    color=alt.Color(field="brand", type="nominal"),
 ).properties(
-    title='Distribution of categories by brands',
-    width=90,
-    height=100
+    title='Which company relies most on funny advertising?',
+    width=300,
+    height=300
 )
 
-# Configure heatmap
-heatmap = base.mark_rect().encode(
-    color=alt.Color('total:Q',
-        scale=alt.Scale(scheme='viridis'),
-        legend=alt.Legend(direction='horizontal')
-    )
-)
+pie = base.mark_arc(outerRadius=120)
+text = base.mark_text(radius=140, size=12).encode(text="funny:N")
 
-# Configure text
-text = base.mark_text(baseline='middle').encode(
-    text='total:Q',
-    color=alt.condition(
-        alt.datum.num_cars > 100,
-        alt.value('black'),
-        alt.value('white')
-    )
-)
-
-# Draw the chart
-c = heatmap + text
+c = pie + text
 st.altair_chart(c, use_container_width=True)
 
 #-------------------
