@@ -155,7 +155,7 @@ st.write("Im Folgenden sind unterschiedliche Diagramme erzeugt worden, welche be
 
 # Bar chart
 st.subheader("Bar Chart")
-st.write("Hier ist zu sehen, welche Marke wie oft sexuell geduldete Inhalte in ihrer Werbung verwendet.")
+st.write("In dem folgenden Diagramm ist zu sehen, welche Marke wie oft sexuell geduldete Inhalte in ihrer Werbung verwendet.")
 
 c = alt.Chart(df).mark_bar().encode(
     alt.X('brand', axis=alt.Axis(title='Brand')),
@@ -228,6 +228,7 @@ st.write("In diesem letzten Diagramm wird deutlich, welches Unternehmen am meist
 base = alt.Chart(final).mark_arc(innerRadius=50).encode(
     theta=alt.Theta(field="funny", type="quantitative", stack=True),
     color=alt.Color(field="brand", type="nominal"),
+    
 ).properties(
     title='Which company relies most on funny advertising?',
     width=300,
