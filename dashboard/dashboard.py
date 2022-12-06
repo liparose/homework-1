@@ -196,7 +196,7 @@ st.altair_chart(c, use_container_width=True)
 
 # Bar chart
 st.subheader("Bar Chart")
-st.write("In diesem Diagramm werden die am häufigsten verwendeten Kategorien, sortiert nach Unternehmen, dargestellt.")
+st.write("In diesem Diagramm werden alle verwendeten Kategorien dargestellt - Dadurch sind die am häufigsten verwendeten Kategorien und die allgemeine Verteilung gut erichtlich.")
 
 source=finalfinal
 
