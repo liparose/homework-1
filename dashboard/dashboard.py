@@ -205,7 +205,6 @@ bars = alt.Chart(source).mark_bar().encode(
     y=alt.Y('brand'),
     color=alt.Color('category')
 ).properties(
-    title='Distribution of categories by brands',
     width=900,
     height=400
 )
