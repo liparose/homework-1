@@ -228,15 +228,14 @@ st.write("In diesem letzten Diagramm wird deutlich, welches Unternehmen am meist
 base = alt.Chart(final).mark_arc(innerRadius=50).encode(
     theta=alt.Theta(field="funny", type="quantitative", stack=True),
     color=alt.Color(field="brand", type="nominal"),
-    
+
 ).properties(
-    title='Which company relies most on funny advertising?',
     width=300,
     height=300
 )
 
-pie = base.mark_arc(outerRadius=120)
-text = base.mark_text(radius=140, size=12).encode(text="funny:N")
+pie = base.mark_arc(outerRadius=100)
+text = base.mark_text(radius=110, size=12).encode(text="funny:N")
 
 c = pie + text
 st.altair_chart(c, use_container_width=True)
