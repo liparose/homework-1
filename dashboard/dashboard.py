@@ -175,7 +175,7 @@ st.altair_chart(c, use_container_width=True)
 
 # Bar chart
 st.subheader("Line Chart")
-st.write("Diese Grafik zeigt die absolute Häufigkeit der Werbeschaltungen von Unternehmen, sortiert nach Jahren.")
+st.write("Diese interaktive Grafik zeigt die absolute Häufigkeit der Werbeschaltungen von Unternehmen, sortiert nach Jahren.")
 
 line = alt.Chart(df).mark_line().encode(
     alt.X('year'),
